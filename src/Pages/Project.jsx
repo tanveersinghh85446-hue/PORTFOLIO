@@ -5,7 +5,7 @@ import { HiArrowUpRight } from "react-icons/hi2"
 import { motion } from "framer-motion"
 
 const projects = [
-  { title: "Portfolio Website", description: "A modern personal portfolio built with React and Tailwind CSS.", image: "Portfolio.jpg", tech: ["HTML", "CSS", "React", "Tailwind"], github: "#", accent: "#4f6ef7" },
+  { title: "Nursery Website", description: "A modern Nursery Website built with React and Tailwind CSS.", image: "Nursery.jpg", tech: ["HTML", "CSS", "React", "Tailwind"], github: "https://plants-gamma-murex.vercel.app/", accent: "#4f6ef7" },
 
   { title: "E-Commerce UI", description: "Responsive e-commerce frontend with product pages and cart UI.", image: "E-Commerce.jpg", tech: ["React", "Tailwind", "JavaScript"], github: "#", accent: "#a855f7" },
 
@@ -19,7 +19,7 @@ const projects = [
 
   { title: "Restaurant Website", description: "Responsive website designed for a restaurant to showcase menu and reservations.", image: "Hotal.jpg", tech: ["React", "Tailwind"], github: "https://hotel-ruddy-seven.vercel.app/", accent: "#f43f5e" },
 
-  { title: "Real Estate Landing Page", description: "Landing page for a real estate company to showcase property listings.", image: "Real Estate.jpg", tech: ["HTML", "CSS", "JavaScript"], github: "https://estate-kifu.vercel.app/", accent: "#22c55e" },
+  { title: "Real Estate Landing Page", description: "Landing page for a real estate company to showcase property listings.", image: "Real Estate.jpg", tech: ["HTML", "CSS", "JavaScript"], github: "https://estate-plum-psi.vercel.app/", accent: "#22c55e" },
 
   { title: "Fitness Trainer Portfolio", description: "Personal portfolio website for a fitness trainer to promote services.", image: "Fitness.jpg", tech: ["React", "Tailwind"], github: "https://gym-alpha-ashy.vercel.app/", accent: "#0ea5e9" },
 ]

@@ -4,56 +4,91 @@ import { NavLink } from 'react-router-dom'
 import { FiMenu, FiX } from "react-icons/fi"
 
 const navStyle = ({ isActive }) =>
-    isActive ? "text-yellow-300 border-b-2 border-yellow-300 pb-1" : "hover:text-yellow-200 transition"
+  isActive
+    ? "text-yellow-300 border-b-2 border-yellow-300 pb-1"
+    : "hover:text-yellow-200 transition"
 
-const desktopLinks = [
-    { to: "/", label: "Home" },
-    { to: "/Project", label: "Projects" },
-    { to: "/Contact", label: "Contact" },
-    { to: "/Blog", label: "Blog" },
-]
-
-const mobileLinks = [
-    ...desktopLinks,
-    { to: "/ClientProject", label: "Client Project" },
+const links = [
+  { to: "/", label: "Home" },
+  { to: "/Project", label: "Projects" },
+  { to: "/Contact", label: "Contact" },
+  { to: "/Blog", label: "Blog" },
 ]
 
 export default function Navbar() {
-    const [open, setOpen] = useState(false)
-    const close = () => setOpen(false)
+  const [open, setOpen] = useState(false)
 
-    return (
-        <div>
-            {/* NAVBAR */}
-            <div className="h-20 px-6 md:px-20 flex flex-col md:flex-row justify-center md:justify-between items-center bg-linear-to-br from-blue-900 via-blue-600">
-                <div className="flex gap-2 items-center">
-                    <NavLink to="/" className="text-2xl md:text-4xl font-serif text-white">Developer</NavLink>
-                    <SiCodersrank className="text-amber-300 text-3xl md:text-5xl animate-bounce" />
-                </div>
-                <nav className="hidden md:flex text-sm md:text-xl gap-6 font-serif text-white">
-                    {desktopLinks.map(({ to, label }) => (
-                        <NavLink key={to} to={to} className={navStyle}>{label}</NavLink>
-                    ))}
-                </nav>
-            </div>
+  return (
+    <div className="relative">
 
-            {/* FLOATING BUTTON (MOBILE) */}
-            <button
-                onClick={() => setOpen(o => !o)}
-                aria-label={open ? "Close menu" : "Open menu"}
-                className="md:hidden fixed bottom-8 right-8 bg-blue-600 text-white text-2xl p-3 rounded-full shadow-lg z-50"
-            >
-                {open ? <FiX /> : <FiMenu />}
-            </button>
+      {/* NAVBAR */}
+      <div className="h-20 px-6 md:px-20 flex justify-between items-center bg-linear-to-r from-blue-900 via-blue-700 to-blue-600 text-white">
 
-            {/* FLOATING MENU */}
-            {open && (
-                <nav className="fixed bottom-24 right-8 bg-[#0f172a] border border-white/10 rounded-2xl p-4 flex flex-col gap-3 text-white text-sm shadow-2xl z-40">
-                    {mobileLinks.map(({ to, label }) => (
-                        <NavLink key={to} to={to} onClick={close} className={navStyle}>{label}</NavLink>
-                    ))}
-                </nav>
-            )}
+        {/* LOGO */}
+        <div className="flex gap-2 items-center">
+          <NavLink to="/" className="text-2xl md:text-4xl font-serif">
+            Developer
+          </NavLink>
+          <SiCodersrank className="text-amber-300 text-3xl md:text-5xl animate-bounce" />
         </div>
-    )
+
+        {/* DESKTOP MENU */}
+        <nav className="hidden md:flex gap-6 text-xl font-serif">
+          {links.map(({ to, label }) => (
+            <NavLink key={to} to={to} className={navStyle}>
+              {label}
+            </NavLink>
+          ))}
+        </nav>
+
+        {/* MOBILE BUTTON */}
+        <button
+          onClick={() => setOpen(true)}
+          className="md:hidden text-3xl"
+        >
+          <FiMenu />
+        </button>
+      </div>
+
+      {/* DARK OVERLAY */}
+      <div
+        className={`fixed inset-0 bg-black/50 transition-opacity duration-300 z-40 ${
+          open ? "opacity-100 visible" : "opacity-0 invisible"
+        }`}
+        onClick={() => setOpen(false)}
+      ></div>
+
+      {/* SLIDE DRAWER MENU */}
+      <div
+        className={`fixed top-0 left-0 h-full w-64 bg-[#0f172a] text-white transform transition-transform duration-300 z-50 ${
+          open ? "translate-x-0" : "-translate-x-full"
+        }`}
+      >
+
+        {/* CLOSE BUTTON */}
+        <div className="flex justify-end p-4">
+          <FiX
+            className="text-3xl cursor-pointer"
+            onClick={() => setOpen(false)}
+          />
+        </div>
+
+        {/* MENU LINKS */}
+        <nav className="flex flex-col gap-6 p-6 text-lg font-serif">
+          {links.map(({ to, label }) => (
+            <NavLink
+              key={to}
+              to={to}
+              onClick={() => setOpen(false)}
+              className={navStyle}
+            >
+              {label}
+            </NavLink>
+          ))}
+        </nav>
+
+      </div>
+
+    </div>
+  )
 }
