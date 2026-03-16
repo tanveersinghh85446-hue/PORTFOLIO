@@ -17,11 +17,14 @@ const projects = [
 
   { title: "Dashboard UI", description: "Modern admin dashboard interface with charts and reusable components.", image: "Dashbord.jpg", tech: ["React", "Tailwind"], github: "#", accent: "#e879f9" },
 
-  { title: "Restaurant Website", description: "Responsive website designed for a restaurant to showcase menu and reservations.", image: "Hotal.jpg", tech: ["React", "Tailwind"], github: "https://hotel-ruddy-seven.vercel.app/", accent: "#f43f5e" },
+  { title: "Hotel Website", description: "Responsive website designed for a Hotel to showcase menu and reservations.", image: "Hotal.jpg", tech: ["React", "Tailwind"], github: "https://hotel-ruddy-seven.vercel.app/", accent: "#f43f5e" },
 
   { title: "Real Estate Landing Page", description: "Landing page for a real estate company to showcase property listings.", image: "Real Estate.jpg", tech: ["HTML", "CSS", "JavaScript"], github: "https://estate-plum-psi.vercel.app/", accent: "#22c55e" },
 
   { title: "Fitness Trainer Portfolio", description: "Personal portfolio website for a fitness trainer to promote services.", image: "Fitness.jpg", tech: ["React", "Tailwind"], github: "https://gym-alpha-ashy.vercel.app/", accent: "#0ea5e9" },
+
+  { title: "Restaurant Website", description: "Responsive website designed for a restaurant to showcase menu and reservations.", image: "Restaurant.jpg", tech: ["React", "Tailwind"], github: "https://restaurant-52fh.vercel.app/", accent: "#f43f5e" },
+
 ]
 
 const STYLES = `@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap');`
@@ -127,7 +130,7 @@ export default function Projects() {
             {projects.map((project, index) => <ProjectCard key={index} {...project} index={index} />)}
           </div>
         </section>
-        
+
       </main>
     </>
   )
