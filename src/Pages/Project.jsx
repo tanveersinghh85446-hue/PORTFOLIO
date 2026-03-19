@@ -9,7 +9,7 @@ const projects = [
 
   { title: "E-Commerce UI", description: "Responsive e-commerce frontend with product pages and cart UI.", image: "E-Commerce.jpg", tech: ["React", "Tailwind", "JavaScript"], github: "#", accent: "#a855f7" },
 
-  { title: "Landing Page", description: "High converting business landing page with modern UI and animations.", image: "Landing Page.jpg", tech: ["HTML", "CSS", "JavaScript"], github: "#", accent: "#10b981" },
+  { title: "Landing Page", description: "High converting business landing page with modern UI and animations.", image: "Landing Page.jpg", tech: ["HTML", "CSS", "JavaScript"], github: "https://landing-theta-five-94.vercel.app/", accent: "#10b981" },
 
   { title: "Blog Website", description: "Clean blog platform with responsive layout and article pages.", image: "Blog.jpg", tech: ["React", "Tailwind"], github: "#", accent: "#f59e0b" },
 
