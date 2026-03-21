@@ -41,7 +41,7 @@ export default function Navbar() {
     }`
 
   return (
-    <>
+    <div>
       {/* NAVBAR */}
       <nav className={`h-16 px-6 md:px-16 flex items-center justify-between text-white sticky top-0 z-50 transition-all duration-300 ${
         scrolled ? 'bg-blue-950 shadow-xl' : 'bg-blue-800 shadow-md'
@@ -130,6 +130,6 @@ export default function Navbar() {
           © 2026 Developer Portfolio
         </div>
       </div>
-    </>
+    </div>
   )
 }

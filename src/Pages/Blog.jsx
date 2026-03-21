@@ -1,4 +1,6 @@
+import React from 'react'
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 
 const posts = [
   {
@@ -112,6 +114,28 @@ function PostRow({ src, tag, title, desc, bullets, accent, reverse }) {
 export default function Blog() {
   return (
     <>
+      <Helmet>
+        <title>Blog — Tanveer Singh | Frontend Developer</title>
+        <meta name="description" content="Thoughts and insights on frontend development, cybersecurity, React, and the modern web ecosystem by Tanveer Singh." />
+        <meta name="keywords" content="Tanveer Singh Blog, Frontend Development, React, Cybersecurity, Web Development, JavaScript" />
+        <meta name="author" content="Tanveer Singh" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://tanveersingh.dev/Blog" />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="Blog — Tanveer Singh | Frontend Developer" />
+        <meta property="og:description" content="Thoughts on frontend development, security, and the web ecosystem." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://tanveersingh.dev/Blog" />
+        <meta property="og:image" content="https://tanveersingh.dev/og-image.jpg" />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Blog — Tanveer Singh | Frontend Developer" />
+        <meta name="twitter:description" content="Thoughts on frontend development, security, and the web ecosystem." />
+        <meta name="twitter:image" content="https://tanveersingh.dev/og-image.jpg" />
+      </Helmet>
+
       <style>{STYLES}</style>
       <div style={{ background: '#08090d', minHeight: '100vh', color: '#fff' }}>
         <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '5rem 1.5rem 0' }}>
