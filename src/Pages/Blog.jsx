@@ -9,7 +9,8 @@ const posts = [
     title: "Global Data Infrastructure & Visualization",
     desc: "Imagine a digital network where every node flows seamlessly through a virtual ecosystem. Each glowing particle represents real-time data moving across decentralized pathways.",
     bullets: ["Cloud computing & big data analytics", "Visualization of network traffic", "Interconnected systems at a global scale"],
-    accent: "#4f6ef7",
+    accent: "text-indigo-400",
+    dot: "bg-indigo-400",
   },
   {
     src: "Herov.mp4",
@@ -17,7 +18,8 @@ const posts = [
     title: "Backend Logic & Email Authentication",
     desc: "Explore secure backend systems handling user authentication and email verification. Efficient workflows ensure safe and seamless user registration experiences.",
     bullets: ["Account verification logic", "Email service integration", "Secure backend architecture"],
-    accent: "#a855f7",
+    accent: "text-purple-400",
+    dot: "bg-purple-400",
     reverse: true,
   },
   {
@@ -26,7 +28,8 @@ const posts = [
     title: "Cybersecurity & Live Development",
     desc: "Witness real-time coding and cybersecurity practices. Structured code and debugging processes demonstrate the discipline required for professional software development.",
     bullets: ["Ethical hacking & security workflows", "IDE & live development focus", "Best practices for secure coding"],
-    accent: "#10b981",
+    accent: "text-emerald-400",
+    dot: "bg-emerald-400",
   },
   {
     src: "JavaScript.mp4",
@@ -34,7 +37,8 @@ const posts = [
     title: "Data Encryption & Matrix Streams",
     desc: "Dense streams of numeric and symbolic data illustrate encryption and data monitoring. This visual gives a clear sense of machine-level data security in action.",
     bullets: ["Matrix-style data visualization", "Encryption & decryption flow", "Cybersecurity monitoring"],
-    accent: "#f59e0b",
+    accent: "text-amber-400",
+    dot: "bg-amber-400",
     reverse: true,
   },
   {
@@ -43,7 +47,8 @@ const posts = [
     title: "React JS & Frontend Development",
     desc: "Build modern, scalable user interfaces using React's component-based architecture. Clean JSX structure and modular design ensure maintainable, high-performance web apps.",
     bullets: ["Reusable component architecture", "JSX structured UI development", "State management & hooks integration", "Optimized rendering & performance"],
-    accent: "#61dbfb",
+    accent: "text-cyan-400",
+    dot: "bg-cyan-400",
   },
   {
     src: "Brain.mp4",
@@ -51,62 +56,46 @@ const posts = [
     title: "Neural Networks & Brain Simulation",
     desc: "Explore the dynamic patterns of neural activity and brain simulations. Complex cognitive processes, memory flows, and AI-inspired neural modeling visualized.",
     bullets: ["Real-time neural network visualization", "Cognitive process simulation", "AI-inspired brain modeling"],
-    accent: "#e879f9",
+    accent: "text-fuchsia-400",
+    dot: "bg-fuchsia-400",
     reverse: true,
   },
 ]
 
-const STYLES = `
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@300;400;500&display=swap');
-body{background:#08090d;font-family:'DM Sans',sans-serif}
-.blog-video{filter:blur(4px) brightness(0.8);transition:filter .5s,transform .5s}
-.blog-video-wrap:hover .blog-video{filter:blur(0) brightness(1);transform:scale(1.03)}
-.section-label{font-family:'Syne',sans-serif;font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#4f6ef7;display:inline-flex;align-items:center;gap:.5rem}
-.section-label::after{content:'';display:inline-block;width:40px;height:1px;background:rgba(255,255,255,0.1)}
-.quote-card{background:rgba(79,110,247,0.07);border:1px solid rgba(79,110,247,0.2);border-radius:1rem;padding:1.75rem 2rem;position:relative;overflow:hidden}
-.quote-card::before{content:'"';position:absolute;top:-.5rem;left:1rem;font-size:6rem;font-family:Georgia,serif;color:rgba(79,110,247,0.12);line-height:1;pointer-events:none}
-.btn-glow{position:relative;overflow:hidden;border:1px solid #4f6ef7;background:transparent;color:#fff;padding:.55rem 1.5rem;border-radius:9999px;font-family:'Syne',sans-serif;font-size:.85rem;font-weight:600;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;transition:color .3s}
-.btn-glow::before{content:'';position:absolute;inset:0;background:#4f6ef7;transform:scaleX(0);transform-origin:left;transition:transform .35s cubic-bezier(.4,0,.2,1)}
-.btn-glow:hover::before{transform:scaleX(1)}
-.btn-glow span{position:relative;z-index:1}
-.footer-link{color:rgba(255,255,255,0.4);text-decoration:none;font-size:.85rem;transition:color .2s}
-.footer-link:hover{color:#fff}
-`
-
-function PostRow({ src, tag, title, desc, bullets, accent, reverse }) {
+function PostRow({ src, tag, title, desc, bullets, accent, dot, reverse }) {
   return (
-    <article style={{
-      display: 'flex', flexWrap: 'wrap',
-      flexDirection: reverse ? 'row-reverse' : 'row',
-      gap: '2.5rem', alignItems: 'center',
-      padding: '3rem 0',
-      borderBottom: '1px solid rgba(255,255,255,0.06)'
-    }}>
-      <div style={{ flex: '1 1 340px', borderRadius: '1rem', overflow: 'hidden', position: 'relative' }} className="blog-video-wrap">
-        <div style={{ position: 'absolute', inset: 0, borderRadius: '1rem', border: '1px solid rgba(255,255,255,0.08)', zIndex: 2, pointerEvents: 'none' }} />
-        <video src={src} autoPlay loop muted playsInline
-          style={{ width: '100%', display: 'block', objectFit: 'cover', borderRadius: '1rem' }}
-          className="blog-video" />
+    <article className={`flex flex-wrap gap-10 items-center py-12 border-b border-white/0.06 ${reverse ? 'flex-row-reverse' : 'flex-row'}`}>
+
+      {/* Video */}
+      <div className="flex-1 min-w-80 rounded-2xl overflow-hidden relative group">
+        <div className="absolute inset-0 rounded-2xl border border-white/0.08 z-10 pointer-events-none" />
+        <video
+          src={src} autoPlay loop muted playsInline
+          className="w-full block object-cover rounded-2xl blur-sm brightness-75 transition-all duration-500 group-hover:blur-none group-hover:brightness-100 group-hover:scale-[1.03]"
+        />
       </div>
-      <div style={{ flex: '1 1 320px' }}>
-        <span style={{ fontFamily: 'Syne,sans-serif', fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: accent, display: 'inline-block', marginBottom: '0.85rem' }}>
+
+      {/* Text */}
+      <div className="flex-1 min-w-80">
+        <span className={`font-['Syne',sans-serif] text-xs font-bold tracking-[0.14em] uppercase ${accent} inline-block mb-3`}>
           {tag}
         </span>
-        <h2 style={{ fontFamily: 'Syne,sans-serif', fontWeight: 800, fontSize: 'clamp(1.2rem,2.5vw,1.65rem)', color: '#fff', lineHeight: 1.2, marginBottom: '1rem' }}>
+        <h2 className="font-['Syne',sans-serif] font-extrabold text-[clamp(1.2rem,2.5vw,1.65rem)] text-white leading-[1.2] mb-4">
           {title}
         </h2>
-        <p style={{ fontSize: '0.9rem', color: 'rgba(255,255,255,0.5)', lineHeight: 1.75, marginBottom: '1.25rem' }}>
+        <p className="text-sm text-white/50 leading-[1.75] mb-5">
           {desc}
         </p>
-        <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.45rem', listStyle: 'none', padding: 0 }}>
+        <ul className="flex flex-col gap-2 list-none p-0">
           {bullets.map((b, i) => (
-            <li key={i} style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', fontSize: '0.83rem', color: 'rgba(255,255,255,0.45)' }}>
-              <span style={{ width: '5px', height: '5px', borderRadius: '50%', background: accent, flexShrink: 0 }} />
+            <li key={i} className="flex items-center gap-2.5 text-[0.83rem] text-white/45">
+              <span className={`w-1.5 h-1.5 rounded-full ${dot} shrink-0`} />
               {b}
             </li>
           ))}
         </ul>
       </div>
+
     </article>
   )
 }
@@ -121,32 +110,31 @@ export default function Blog() {
         <meta name="author" content="Tanveer Singh" />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://tanveersingh.dev/Blog" />
-
-        {/* Open Graph */}
         <meta property="og:title" content="Blog — Tanveer Singh | Frontend Developer" />
         <meta property="og:description" content="Thoughts on frontend development, security, and the web ecosystem." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://tanveersingh.dev/Blog" />
         <meta property="og:image" content="https://tanveersingh.dev/og-image.jpg" />
-
-        {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Blog — Tanveer Singh | Frontend Developer" />
         <meta name="twitter:description" content="Thoughts on frontend development, security, and the web ecosystem." />
         <meta name="twitter:image" content="https://tanveersingh.dev/og-image.jpg" />
+        <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
       </Helmet>
 
-      <style>{STYLES}</style>
-      <div style={{ background: '#08090d', minHeight: '100vh', color: '#fff' }}>
-        <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '5rem 1.5rem 0' }}>
+      <main className="bg-[#08090d] min-h-screen text-white font-['DM_Sans',sans-serif]">
+        <div className="max-w-275 mx-auto px-6 pt-20">
 
           {/* PAGE HEADER */}
-          <header style={{ textAlign: 'center', marginBottom: '4rem' }}>
-            <span className="section-label" style={{ justifyContent: 'center', marginBottom: '1rem', display: 'inline-flex' }}>Writing & Insights</span>
-            <h1 style={{ fontFamily: 'Syne,sans-serif', fontWeight: 800, fontSize: 'clamp(2.5rem,6vw,4.5rem)', color: '#fff', lineHeight: 1.05, letterSpacing: '-0.02em' }}>
+          <header className="text-center mb-16">
+            <span className="font-['Syne',sans-serif] text-xs font-bold tracking-[0.14em] uppercase text-indigo-400 inline-flex items-center justify-center gap-2 mb-4
+              after:content-[''] after:inline-block after:w-10 after:h-px after:bg-white/10">
+              Writing & Insights
+            </span>
+            <h1 className="font-['Syne',sans-serif] font-extrabold text-[clamp(2.5rem,6vw,4.5rem)] text-white leading-[1.05] tracking-tight">
               My Blog
             </h1>
-            <p style={{ color: 'rgba(255,255,255,0.4)', fontSize: '1rem', maxWidth: '440px', margin: '1rem auto 0' }}>
+            <p className="text-white/40 text-base max-w-sm mx-auto mt-4">
               Thoughts on frontend development, security, and the web ecosystem.
             </p>
           </header>
@@ -157,35 +145,55 @@ export default function Blog() {
           </section>
 
           {/* JOURNEY */}
-          <section style={{ padding: '5rem 0 3rem', maxWidth: '640px', margin: '0 auto', textAlign: 'center' }} aria-label="Coding journey">
-            <span className="section-label" style={{ justifyContent: 'center', marginBottom: '1rem', display: 'inline-flex' }}>My Story</span>
-            <h2 style={{ fontFamily: 'Syne,sans-serif', fontWeight: 800, fontSize: 'clamp(1.6rem,3vw,2.4rem)', color: '#fff', marginBottom: '1.25rem' }}>
+          <section className="py-20 max-w-xl mx-auto text-center" aria-label="Coding journey">
+            <span className="font-['Syne',sans-serif] text-xs font-bold tracking-[0.14em] uppercase text-indigo-400 inline-flex items-center justify-center gap-2 mb-4
+              after:content-[''] after:inline-block after:w-10 after:h-px after:bg-white/10">
+              My Story
+            </span>
+            <h2 className="font-['Syne',sans-serif] font-extrabold text-[clamp(1.6rem,3vw,2.4rem)] text-white mb-5">
               My Coding Journey
             </h2>
-            <p style={{ fontSize: '0.95rem', color: 'rgba(255,255,255,0.45)', lineHeight: 1.8, marginBottom: '2rem' }}>
+            <p className="text-[0.95rem] text-white/45 leading-[1.8] mb-8">
               I started learning web development with curiosity and passion. Building projects and exploring technologies like HTML, CSS, JavaScript and React helped me grow my skills and creativity. I enjoy crafting responsive, modern web experiences.
             </p>
-            <div className="quote-card" style={{ marginBottom: '2.5rem', textAlign: 'left' }}>
-              <p style={{ fontStyle: 'italic', color: 'rgba(255,255,255,0.65)', fontSize: '1rem', lineHeight: 1.7, position: 'relative', zIndex: 1 }}>
+
+            {/* Quote Card */}
+            <div className="relative bg-indigo-500/[0.07] border border-indigo-500/20 rounded-2xl px-8 py-7 mb-10 text-left overflow-hidden">
+              <span className="absolute top-2 left-4 text-[6rem] font-['Georgia',serif] text-indigo-500/10 leading-none pointer-events-none select-none">"</span>
+              <p className="italic text-white/65 text-base leading-[1.7] relative z-10">
                 "Code is like art — the more you practice, the better it becomes."
               </p>
             </div>
-            <Link to="/Project" className="btn-glow"><span>View My Projects →</span></Link>
+
+            {/* Button */}
+            <Link to="/Project"
+              className="relative overflow-hidden border border-indigo-500 bg-transparent text-white px-6 py-2 rounded-full font-['Syne',sans-serif] text-sm font-semibold inline-flex items-center
+              before:content-[''] before:absolute before:inset-0 before:bg-indigo-500 before:scale-x-0 before:origin-left before:transition-transform before:duration-300
+              hover:before:scale-x-100 [&>span]:relative [&>span]:z-10">
+              <span>View My Projects →</span>
+            </Link>
           </section>
 
         </div>
 
         {/* FOOTER */}
-        <footer style={{ borderTop: '1px solid rgba(255,255,255,0.07)', padding: '2.5rem 1.5rem', textAlign: 'center', marginTop: '3rem' }}>
-          <p style={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.3)', marginBottom: '0.75rem' }}>
+        <footer className="border-t border-white/[0.07] py-10 px-6 text-center mt-12">
+          <p className="text-xs text-white/30 mb-3">
             © {new Date().getFullYear()} Tanveer Singh
           </p>
-          <div style={{ display: 'flex', justifyContent: 'center', gap: '1.5rem' }}>
-            <a href="https://www.linkedin.com/in/tanveer-singh-ab008637b/" className="footer-link">LinkedIn</a>
-            <a href="https://www.instagram.com/code_with_tanveer/" className="footer-link">Instagram</a>
+          <div className="flex justify-center gap-6">
+            <a href="https://www.linkedin.com/in/tanveer-singh-ab008637b/"
+              className="text-white/40 text-sm no-underline hover:text-white transition-colors duration-200">
+              LinkedIn
+            </a>
+            <a href="https://www.instagram.com/code_with_tanveer/"
+              className="text-white/40 text-sm no-underline hover:text-white transition-colors duration-200">
+              Instagram
+            </a>
           </div>
         </footer>
-      </div>
+
+      </main>
     </>
   )
 }
