@@ -15,7 +15,7 @@ const projects = [
   { title: "Real Estate Landing Page", description: "Landing page for a real estate company to showcase property listings.", image: "Real Estate.jpg", tech: ["HTML", "CSS", "JavaScript"], github: "https://estate-plum-psi.vercel.app/", accent: "green", accentHex: "#22c55e" },
   { title: "Fitness Trainer Portfolio", description: "Personal portfolio website for a fitness trainer to promote services.", image: "Fitness.jpg", tech: ["React", "Tailwind"], github: "https://gym-alpha-ashy.vercel.app/", accent: "sky", accentHex: "#0ea5e9" },
   { title: "Restaurant Website", description: "Responsive website designed for a restaurant to showcase menu and reservations.", image: "Restaurant.jpg", tech: ["React", "Tailwind"], github: "https://restaurant-52fh.vercel.app/", accent: "rose", accentHex: "#f43f5e" },
-    { title: "Yoga Website", description: "Responsive website designed for a yoga to showcase menu and reservations.", image: "Yoga.jpg", tech: ["React", "Tailwind"], github: "https://yoga-lilac.vercel.app/", accent: "rose", accentHex: "#f43f5e" }
+  { title: "Yoga Website", description: "Responsive website designed for a yoga to showcase menu and reservations.", image: "Yoga.jpg", tech: ["React", "Tailwind"], github: "https://yoga-lilac.vercel.app/", accent: "rose", accentHex: "#f43f5e" }
 
 ]
 
