@@ -24,26 +24,20 @@ function useInView(threshold = 0.15) {
 }
 
 /* ─── skill pill ─── */
-const Pill = ({ label, delay }) => (
-  <span
-    style={{ animationDelay: `${delay}ms` }}
-    className="px-3 py-1 text-sm rounded-full border border-white/10 bg-white/5 text-gray-300 hover:bg-blue-500/20 hover:border-blue-400 hover:text-white transition transform hover:-translate-y-1"
-  >
+const Pill = ({ label }) => (
+  <span className="px-3 py-1 text-sm rounded-full border border-white/10 bg-white/5 text-gray-300 hover:bg-blue-500/20 hover:border-blue-400 hover:text-white transition transform hover:-translate-y-1">
     {label}
   </span>
 );
 
 /* ─── cert card ─── */
-const CertCard = ({ src, title, delay }) => (
-  <div
-    style={{ animationDelay: `${delay}ms` }}
-    className="rounded-xl overflow-hidden border border-white/10 bg-white/5 backdrop-blur hover:scale-105 hover:shadow-xl transition"
-  >
+const CertCard = ({ src, title }) => (
+  <div className="rounded-xl overflow-hidden border border-white/10 bg-white/5 backdrop-blur hover:scale-105 hover:shadow-xl transition">
     <div className="h-40 overflow-hidden">
       <img
         src={src}
         alt={title}
-        className="w-full h-full object-cover hover:scale-110 transition"
+        className="w-full h-full object-cover transition duration-300 hover:scale-110"
       />
     </div>
     <p className="text-sm text-gray-300 px-4 py-2">{title}</p>
@@ -51,11 +45,8 @@ const CertCard = ({ src, title, delay }) => (
 );
 
 /* ─── info card ─── */
-const InfoCard = ({ label, text, icon, delay }) => (
-  <div
-    style={{ animationDelay: `${delay}ms` }}
-    className="p-6 rounded-xl border border-white/10 bg-white/5 backdrop-blur hover:-translate-y-1 transition"
-  >
+const InfoCard = ({ label, text, icon }) => (
+  <div className="p-6 rounded-xl border border-white/10 bg-white/5 backdrop-blur hover:-translate-y-1 transition">
     <span className="text-2xl mb-2 block">{icon}</span>
     <p className="text-xs uppercase tracking-widest text-blue-400 mb-2">
       {label}
@@ -70,24 +61,13 @@ export default function About() {
   const [certRef, certVisible] = useInView();
 
   const skills = [
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "React",
-    "Tailwind",
-    "Node.js",
-    "Git",
-    "Python",
-    "SQL",
-    "Photoshop",
-    "CorelDRAW",
-    "Canva",
-    "PowerPoint",
-    "Excel",
+    "HTML","CSS","JavaScript","React","Tailwind",
+    "Node.js","Git","Python","SQL","Photoshop",
+    "CorelDRAW","Canva","PowerPoint","Excel",
   ];
 
   return (
-    <section className="relative min-h-screen bg-[#08090d] text-white overflow-x-hidden">
+    <section className="relative min-h-screen bg-[#08090d] text-white overflow-hidden">
 
       {/* Background Video */}
       <video
@@ -95,9 +75,9 @@ export default function About() {
         loop
         muted
         playsInline
-        className="absolute inset-0 w-full h-full object-cover opacity-20"
+        className="absolute inset-0 w-full h-full object-cover opacity-20 pointer-events-none"
       >
-        <source src="Bg.mp4" type="video/mp4" />
+        <source src="/Bg.mp4" type="video/mp4" />
       </video>
 
       {/* HERO */}
@@ -131,7 +111,6 @@ export default function About() {
         <div className="border-t border-blue-500/30 my-10" />
 
         <div className="grid md:grid-cols-2 gap-12">
-
           {/* Who */}
           <div>
             <p className="text-xs uppercase tracking-widest text-cyan-400 mb-2">
@@ -153,8 +132,8 @@ export default function About() {
             <h2 className="text-2xl font-semibold mb-3">My Skills</h2>
 
             <div className="flex flex-wrap gap-2">
-              {skills.map((s, i) => (
-                <Pill key={s} label={s} delay={i * 50} />
+              {skills.map((s) => (
+                <Pill key={s} label={s} />
               ))}
             </div>
           </div>
@@ -172,7 +151,7 @@ export default function About() {
           <InfoCard
             icon="📚"
             label="Learning"
-            text="Backend, APIs, MongoDB, Docker & advanced React."
+            text="Backend, APIs, MongoDB & advanced React."
           />
           <InfoCard
             icon="⚡"
