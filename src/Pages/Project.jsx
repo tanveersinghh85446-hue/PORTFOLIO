@@ -6,7 +6,7 @@ import { motion } from "framer-motion"
 
 const projects = [
   { title: "Nursery Website", description: "A modern Nursery Website built with React and Tailwind CSS.", image: "Nursery.jpg", tech: ["HTML", "CSS", "React", "Tailwind"], github: "https://plants-gamma-murex.vercel.app/", accent: "indigo", accentHex: "#4f6ef7" },
-  { title: "E-Commerce UI", description: "Responsive e-commerce frontend with product pages and cart UI.", image: "E-Commerce.jpg", tech: ["React", "Tailwind", "JavaScript"], github: "#", accent: "purple", accentHex: "#a855f7" },
+  { title: "E-Commerce UI", description: "Responsive e-commerce frontend with product pages and cart UI.", image: "E-Commerce.jpg", tech: ["React", "Tailwind", "JavaScript"], github: "https://e-commerce-zeta-nine-a955plj7d7.vercel.app/", accent: "purple", accentHex: "#a855f7" },
   { title: "Landing Page", description: "High converting business landing page with modern UI and animations.", image: "Landing Page.jpg", tech: ["HTML", "CSS", "JavaScript"], github: "https://landing-theta-five-94.vercel.app/", accent: "emerald", accentHex: "#10b981" },
   { title: "Blog Website", description: "Clean blog platform with responsive layout and article pages.", image: "Blog.jpg", tech: ["React", "Tailwind"], github: "https://blog-rose-five-83.vercel.app/", accent: "amber", accentHex: "#f59e0b" },
   { title: "Business Website", description: "Professional business website for small companies and startups.", image: "Business.jpg", tech: ["HTML", "CSS", "JavaScript"], github: "#", accent: "cyan", accentHex: "#61dbfb" },
