@@ -5,17 +5,15 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const linkClass = ({ isActive }) =>
-    `px-3.5 py-2 text-sm rounded-lg no-underline font-['Syne',sans-serif] transition-all duration-150 ${
-      isActive
-        ? 'text-indigo-600 bg-indigo-50 font-medium'
-        : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100 font-normal'
+    `px-3.5 py-2 text-sm rounded-lg no-underline font-['Syne',sans-serif] transition-all duration-150 ${isActive
+      ? 'text-indigo-600 bg-indigo-50 font-medium'
+      : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100 font-normal'
     }`;
 
   const mobileLinkClass = ({ isActive }) =>
-    `block px-4 py-3 text-[0.95rem] rounded-xl no-underline font-['Syne',sans-serif] transition-all duration-150 ${
-      isActive
-        ? 'text-indigo-600 bg-indigo-50 font-medium'
-        : 'text-gray-800 hover:bg-gray-50 font-normal'
+    `block px-4 py-3 text-[0.95rem] rounded-xl no-underline font-['Syne',sans-serif] transition-all duration-150 ${isActive
+      ? 'text-indigo-600 bg-indigo-50 font-medium'
+      : 'text-gray-800 hover:bg-gray-50 font-normal'
     }`;
 
   return (
@@ -34,11 +32,12 @@ export default function Navbar() {
           <NavLink to="/Project" className={linkClass}>Project</NavLink>
           <NavLink to="/Blog" className={linkClass}>Blog</NavLink>
           <NavLink to="/Contact" className={linkClass}>Contact</NavLink>
+          <NavLink to="/About" className={linkClass}>About Me</NavLink>
         </div>
 
         {/* Desktop CTA */}
-        
-          <a href="/contact"
+
+        <a href="/contact"
           className="hidden md:inline-block px-4 py-2 bg-indigo-600 text-white rounded-lg text-sm font-medium no-underline hover:bg-indigo-700 transition-colors duration-150 font-['Syne',sans-serif]"
         >
           Hire Me
@@ -62,8 +61,10 @@ export default function Navbar() {
         <NavLink to="/Project" className={mobileLinkClass} onClick={() => setIsOpen(false)}>Project</NavLink>
         <NavLink to="/Blog" className={mobileLinkClass} onClick={() => setIsOpen(false)}>Blog</NavLink>
         <NavLink to="/Contact" className={mobileLinkClass} onClick={() => setIsOpen(false)}>Contact</NavLink>
-        
-          <a href="#contact"
+        <NavLink to="/About" className={mobileLinkClass} onClick={() => setIsOpen(false)}>About Me</NavLink>
+
+
+        <a href="#contact"
           onClick={() => setIsOpen(false)}
           className="mt-2 block text-center px-4 py-3 bg-indigo-600 text-white rounded-xl text-[0.95rem] font-medium no-underline font-['Syne',sans-serif]"
         >
