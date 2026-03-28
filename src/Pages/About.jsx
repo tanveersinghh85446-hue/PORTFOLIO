@@ -1,4 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
+import { GoGoal } from "react-icons/go";
+import { FaBook } from "react-icons/fa";
+import { BsLightningChargeFill } from "react-icons/bs";
 
 /* ─── hook ─── */
 function useInView(threshold = 0.15) {
@@ -61,9 +64,9 @@ export default function About() {
   const [certRef, certVisible] = useInView();
 
   const skills = [
-    "HTML","CSS","JavaScript","React","Tailwind",
-    "Node.js","Git","Python","SQL","Photoshop",
-    "CorelDRAW","Canva","PowerPoint","Excel",
+    "HTML", "CSS", "JavaScript", "React", "Tailwind",
+    "Node.js", "Git", "Python", "SQL", "Photoshop",
+    "CorelDRAW", "Canva", "PowerPoint", "Excel",
   ];
 
   return (
@@ -83,9 +86,8 @@ export default function About() {
       {/* HERO */}
       <div
         ref={heroRef}
-        className={`relative z-10 max-w-3xl mx-auto text-center px-6 pt-32 pb-16 transition-all duration-700 ${
-          heroVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-        }`}
+        className={`relative z-10 max-w-3xl mx-auto text-center px-6 pt-32 pb-16 transition-all duration-700 ${heroVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
       >
         <p className="uppercase tracking-widest text-blue-400 text-sm mb-4">
           Portfolio · 2025
@@ -104,9 +106,8 @@ export default function About() {
       {/* BODY */}
       <div
         ref={bodyRef}
-        className={`relative z-10 max-w-6xl mx-auto px-6 pb-20 transition-all duration-700 ${
-          bodyVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-        }`}
+        className={`relative z-10 max-w-6xl mx-auto px-6 pb-20 transition-all duration-700 ${bodyVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
       >
         <div className="border-t border-blue-500/30 my-10" />
 
@@ -144,17 +145,17 @@ export default function About() {
         {/* Info Cards */}
         <div className="grid md:grid-cols-3 gap-5">
           <InfoCard
-            icon="🎯"
+            icon={<GoGoal/>}
             label="My Goal"
             text="Become a full-stack developer and build scalable web apps."
           />
           <InfoCard
-            icon="📚"
+            icon={<FaBook/>}
             label="Learning"
             text="Backend, APIs, MongoDB & advanced React."
           />
           <InfoCard
-            icon="⚡"
+            icon={<BsLightningChargeFill/>}
             label="Work Style"
             text="Clean code, great UX, and creative problem solving."
           />
@@ -164,9 +165,8 @@ export default function About() {
       {/* CERTIFICATES */}
       <div
         ref={certRef}
-        className={`relative z-10 max-w-6xl mx-auto px-6 pb-28 transition-all duration-700 ${
-          certVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-        }`}
+        className={`relative z-10 max-w-6xl mx-auto px-6 pb-28 transition-all duration-700 ${certVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
       >
         <div className="border-t border-blue-500/30 my-10" />
 
@@ -175,15 +175,32 @@ export default function About() {
         </p>
 
         <h2 className="text-center text-3xl font-bold mb-10 bg-linear-to-r from-white to-blue-400 bg-clip-text text-transparent">
-          My Certificates
+          My Certification
         </h2>
 
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
-          <CertCard src="/certificates/cert1.jpg" title="Web Development" />
-          <CertCard src="/certificates/cert2.jpg" title="React" />
-          <CertCard src="/certificates/cert3.jpg" title="JavaScript" />
+          <CertCard src="" title="Web Development" />
+          <CertCard src="" title="React" />
+          <CertCard src="" title="JavaScript" />
         </div>
       </div>
+
+      {/* FOOTER */}
+      <footer className="border-t border-white/[0.07] py-10 px-6 text-center mt-12">
+        <p className="text-xs text-white/30 mb-3">
+          © {new Date().getFullYear()} Tanveer Singh
+        </p>
+        <div className="flex justify-center gap-6">
+          <a href="https://www.linkedin.com/in/tanveer-singh-ab008637b/"
+            className="text-white/40 text-sm no-underline hover:text-white transition-colors duration-200">
+            LinkedIn
+          </a>
+          <a href="https://www.instagram.com/web_createrr/"
+            className="text-white/40 text-sm no-underline hover:text-white transition-colors duration-200">
+            Instagram
+          </a>
+        </div>
+      </footer>
     </section>
   );
 }

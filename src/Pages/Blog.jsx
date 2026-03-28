@@ -186,7 +186,7 @@ export default function Blog() {
               className="text-white/40 text-sm no-underline hover:text-white transition-colors duration-200">
               LinkedIn
             </a>
-            <a href="https://www.instagram.com/code_with_tanveer/"
+            <a href="https://www.instagram.com/web_createrr/"
               className="text-white/40 text-sm no-underline hover:text-white transition-colors duration-200">
               Instagram
             </a>

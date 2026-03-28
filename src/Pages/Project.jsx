@@ -146,6 +146,23 @@ export default function Projects() {
           </div>
         </section>
 
+        {/* FOOTER */}
+        <footer className="border-t border-white/[0.07] py-10 px-6 text-center mt-12">
+          <p className="text-xs text-white/30 mb-3">
+            © {new Date().getFullYear()} Tanveer Singh
+          </p>
+          <div className="flex justify-center gap-6">
+            <a href="https://www.linkedin.com/in/tanveer-singh-ab008637b/"
+              className="text-white/40 text-sm no-underline hover:text-white transition-colors duration-200">
+              LinkedIn
+            </a>
+            <a href="https://www.instagram.com/web_createrr/"
+              className="text-white/40 text-sm no-underline hover:text-white transition-colors duration-200">
+              Instagram
+            </a>
+          </div>
+        </footer>
+
       </main>
     </>
   )

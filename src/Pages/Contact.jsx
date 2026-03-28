@@ -178,7 +178,7 @@ export default function Contact() {
           <div className="flex justify-center gap-6">
             <a href="https://www.linkedin.com/in/tanveer-singh-ab008637b/"
               className="text-white/35 text-sm no-underline hover:text-white transition-colors duration-200">LinkedIn</a>
-            <a href="https://www.instagram.com/code_with_tanveer/"
+            <a href="https://www.instagram.com/web_createrr/"
               className="text-white/35 text-sm no-underline hover:text-white transition-colors duration-200">Instagram</a>
           </div>
         </footer>

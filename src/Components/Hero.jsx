@@ -9,6 +9,7 @@ import { SiNetlify, SiSvelte, SiAstro, SiAlpinedotjs, SiVite, SiRedwoodjs, SiVit
 import { TbBrandSolidjs, TbBrandStorybook } from "react-icons/tb";
 import { FaPlaystation } from "react-icons/fa6";
 import { IoMailOpenOutline } from "react-icons/io5";
+import { FaLinkedin } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import { motion, useAnimation, useMotionValue } from "framer-motion";
 
@@ -374,10 +375,15 @@ export default function Home() {
                                         transition-all duration-200 hover:bg-[#25d366] hover:text-white hover:-translate-y-1">
                                         <FaWhatsapp />
                                     </a>
-                                    <a href="https://www.instagram.com/code_with_tanveer/" aria-label="Instagram"
+                                    <a href="https://www.instagram.com/web_createrr/" aria-label="Instagram"
                                         className="w-10 h-10 rounded-xl flex items-center justify-center bg-white/5 border border-white/[0.07] text-lg text-gray-500
                                         transition-all duration-200 hover:bg-[#e1306c] hover:text-white hover:-translate-y-1">
                                         <FaInstagram />
+                                    </a>
+                                    <a href="https://www.linkedin.com/in/tanveer-singh-ab008637b/" aria-label="Instagram"
+                                        className="w-10 h-10 rounded-xl flex items-center justify-center bg-white/5 border border-white/[0.07] text-lg text-gray-500
+                                        transition-all duration-200 hover:bg-[#246ce8] hover:text-white hover:-translate-y-1">
+                                        <FaLinkedin />
                                     </a>
                                 </div>
                             </div>
