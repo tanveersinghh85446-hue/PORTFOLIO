@@ -5,12 +5,22 @@ import { FaCss3Alt, FaReact, FaGithub, FaWhatsapp, FaInstagram, FaVuejs } from "
 import { RiTailwindCssFill } from "react-icons/ri";
 import { VscVscode } from "react-icons/vsc";
 import { DiJavascript } from "react-icons/di";
-import { SiNetlify, SiSvelte, SiAstro, SiAlpinedotjs, SiVite, SiRedwoodjs, SiVitest, SiEslint, SiTrpc, SiNuxt, SiRemix, SiCodersrank, SiAuth0, SiZod } from "react-icons/si";
-import { TbBrandSolidjs, TbBrandStorybook } from "react-icons/tb";
-import { FaPlaystation } from "react-icons/fa6";
+import { SiCoreldraw } from "react-icons/si";
+import { SiNetlify, SiSvelte, SiAstro, SiAlpinedotjs, SiVite, SiVitest, SiEslint, SiNuxt, SiRemix, SiCodersrank, SiAuth0, SiZod } from "react-icons/si";
+import { LuBrainCircuit } from "react-icons/lu";
+
+import { SiCanva } from "react-icons/si";
 import { IoMailOpenOutline } from "react-icons/io5";
 import { FaLinkedin } from "react-icons/fa";
+import { DiPhotoshop } from "react-icons/di";
 import { Link } from 'react-router-dom';
+import { FaInfinity } from "react-icons/fa";
+import { PiMicrosoftPowerpointLogoFill } from "react-icons/pi";
+import { RiFileExcel2Fill } from "react-icons/ri";
+import { TbBrandMysql } from "react-icons/tb";
+import { FaBrain } from "react-icons/fa";
+
+
 import { motion, useAnimation, useMotionValue } from "framer-motion";
 
 const frontend = [
@@ -35,6 +45,7 @@ const techStack = [
     { name: "JavaScript", icon: <DiJavascript />, color: "text-yellow-400" },
     { name: "VS Code", icon: <VscVscode />, color: "text-blue-400" },
     { name: "Netlify", icon: <SiNetlify />, color: "text-teal-400" },
+
 ];
 
 const leftIcons = [
@@ -42,23 +53,25 @@ const leftIcons = [
     { icon: <FaVuejs />, color: "text-green-400", label: "Vue" },
     { icon: <SiSvelte />, color: "text-orange-500", label: "Svelte" },
     { icon: <SiAstro />, color: "text-orange-400", label: "Astro" },
-    { icon: <TbBrandSolidjs />, color: "text-pink-500", label: "Solid" },
-    { icon: <SiAlpinedotjs />, color: "text-sky-300", label: "Alpine" },
+    { icon: <SiCoreldraw />, color: "text-green-500", label: "Coreldraw" },
+    { icon: < SiCanva/>, color: "text-sky-300", label: "Canva" },
     { icon: <SiVite />, color: "text-indigo-400", label: "Vite" },
-    { icon: <SiRedwoodjs />, color: "text-red-400", label: "Redwood" },
-    { icon: <SiAuth0 />, color: "text-orange-500", label: "Auth0" },
+    { icon: <RiFileExcel2Fill />, color: "text-green-500", label: "Excel" },
+    { icon: < TbBrandMysql />, color: "text-white", label: "MySql" },
+
 ];
 
 const rightIcons = [
     { icon: <SiVitest />, color: "text-green-400", label: "Vitest" },
     { icon: <RiTailwindCssFill />, color: "text-sky-400", label: "Tailwind" },
     { icon: <SiEslint />, color: "text-indigo-500", label: "ESLint" },
-    { icon: <SiTrpc />, color: "text-pink-400", label: "tRPC" },
+    { icon: <FaInfinity />, color: "text-pink-400", label: "DeveOps" },
     { icon: <SiNuxt />, color: "text-emerald-400", label: "Nuxt" },
-    { icon: <TbBrandStorybook />, color: "text-pink-500", label: "Storybook" },
-    { icon: <SiRemix />, color: "text-pink-600", label: "Remix" },
+    { icon: <FaBrain />, color: "text-pink-500", label: "Ai" },
+    { icon: <PiMicrosoftPowerpointLogoFill />, color: "text-red-500", label: "Remix" },
     { icon: <SiZod />, color: "text-violet-500", label: "Zod" },
-    { icon: <FaPlaystation />, color: "text-yellow-400", label: "PS" },
+    { icon: <DiPhotoshop />, color: "text-blue-400", label: "PhotoShop" },
+
 ];
 
 const aboutCards = [
