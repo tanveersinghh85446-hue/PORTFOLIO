@@ -5,18 +5,114 @@ import { HiArrowUpRight } from "react-icons/hi2"
 import { motion } from "framer-motion"
 
 const projects = [
-  { title: "Nursery Website", description: "A modern Nursery Website built with React and Tailwind CSS.", image: "Nursery.jpg", tech: ["HTML", "CSS", "React", "Tailwind"], github: "https://plants-gamma-murex.vercel.app/", accent: "indigo", accentHex: "#4f6ef7" },
-  { title: "E-Commerce UI", description: "Responsive e-commerce frontend with product pages and cart UI.", image: "E-Commerce.jpg", tech: ["React", "Tailwind", "JavaScript"], github: "https://e-commerce-zeta-eosin-y5a7jm8f0m.vercel.app/", accent: "purple", accentHex: "#a855f7" },
-  { title: "Landing Page", description: "High converting business landing page with modern UI and animations.", image: "Landing Page.jpg", tech: ["HTML", "CSS", "JavaScript"], github: "https://landing-theta-five-94.vercel.app/", accent: "emerald", accentHex: "#10b981" },
-  { title: "Blog Website", description: "Clean blog platform with responsive layout and article pages.", image: "Blog.jpg", tech: ["React", "Tailwind"], github: "https://blog-rose-five-83.vercel.app/", accent: "amber", accentHex: "#f59e0b" },
-  { title: "Business Website", description: "Professional business website for small companies and startups.", image: "Business.jpg", tech: ["HTML", "CSS", "JavaScript"], github: "#", accent: "cyan", accentHex: "#61dbfb" },
-  { title: "Dashboard UI", description: "Modern admin dashboard interface with charts and reusable components.", image: "Dashbord.jpg", tech: ["React", "Tailwind"], github: "#", accent: "fuchsia", accentHex: "#e879f9" },
-  { title: "Hotel Website", description: "Responsive website designed for a Hotel to showcase menu and reservations.", image: "Hotal.jpg", tech: ["React", "Tailwind"], github: "https://hotel-ruddy-seven.vercel.app/", accent: "rose", accentHex: "#f43f5e" },
-  { title: "Real Estate Landing Page", description: "Landing page for a real estate company to showcase property listings.", image: "Real Estate.jpg", tech: ["HTML", "CSS", "JavaScript"], github: "https://estate-plum-psi.vercel.app/", accent: "green", accentHex: "#22c55e" },
-  { title: "Fitness Trainer Portfolio", description: "Personal portfolio website for a fitness trainer to promote services.", image: "Fitness.jpg", tech: ["React", "Tailwind"], github: "https://gym-alpha-ashy.vercel.app/", accent: "sky", accentHex: "#0ea5e9" },
-  { title: "Restaurant Website", description: "Responsive website designed for a restaurant to showcase menu and reservations.", image: "Restaurant.jpg", tech: ["React", "Tailwind"], github: "https://restaurant-52fh.vercel.app/", accent: "rose", accentHex: "#f43f5e" },
-  { title: "Yoga Website", description: "Responsive website designed for a yoga to showcase menu and reservations.", image: "Yoga.jpg", tech: ["React", "Tailwind"], github: "https://yoga-lilac.vercel.app/", accent: "rose", accentHex: "#f43f5e" }
-
+  {
+    title: "Nursery Website",
+    description: "A modern Nursery Website built with React and Tailwind CSS.",
+    image: "Nursery.jpg",
+    tech: ["HTML", "CSS", "React", "Tailwind"],
+    github: "https://plants-gamma-murex.vercel.app/",
+    accent: "indigo",
+    accentHex: "#4f6ef7"
+  },
+  {
+    title: "E-Commerce UI",
+    description: "Responsive e-commerce frontend with product pages and cart UI.",
+    image: "E-Commerce.jpg",
+    tech: ["React", "Tailwind", "JavaScript"],
+    github: "https://e-commerce-zeta-eosin-y5a7jm8f0m.vercel.app/",
+    accent: "purple",
+    accentHex: "#a855f7"
+  },
+  {
+    title: "Landing Page",
+    description: "High converting business landing page with modern UI and animations.",
+    image: "Landing Page.jpg",
+    tech: ["HTML", "CSS", "JavaScript"],
+    github: "https://landing-theta-five-94.vercel.app/",
+    accent: "emerald",
+    accentHex: "#10b981"
+  },
+  {
+    title: "Blog Website",
+    description: "Clean blog platform with responsive layout and article pages.",
+    image: "Blog.jpg",
+    tech: ["React", "Tailwind"],
+    github: "https://blog-rose-five-83.vercel.app/",
+    accent: "amber",
+    accentHex: "#f59e0b"
+  },
+  {
+    title: "Business Website",
+    description: "Professional business website for small companies and startups.",
+    image: "Business.jpg",
+    tech: ["HTML", "CSS", "JavaScript"],
+    github: "#",
+    accent: "cyan",
+    accentHex: "#61dbfb"
+  },
+  {
+    title: "Dashboard UI",
+    description: "Modern admin dashboard interface with charts and reusable components.",
+    image: "Dashbord.jpg",
+    tech: ["React", "Tailwind"],
+    github: "#",
+    accent: "fuchsia",
+    accentHex: "#e879f9"
+  },
+  {
+    title: "Hotel Website",
+    description: "Responsive website designed for a Hotel to showcase menu and reservations.",
+    image: "Hotal.jpg",
+    tech: ["React", "Tailwind"],
+    github: "https://hotel-ruddy-seven.vercel.app/",
+    accent: "rose",
+    accentHex: "#f43f5e"
+  },
+  {
+    title: "Real Estate Landing Page",
+    description: "Landing page for a real estate company to showcase property listings.",
+    image: "Real Estate.jpg",
+    tech: ["HTML", "CSS", "JavaScript"],
+    github: "https://estate-plum-psi.vercel.app/",
+    accent: "green",
+    accentHex: "#22c55e"
+  },
+  {
+    title: "Fitness Trainer Portfolio",
+    description: "Personal portfolio website for a fitness trainer to promote services.",
+    image: "Fitness.jpg",
+    tech: ["React", "Tailwind"],
+    github: "https://gym-alpha-ashy.vercel.app/",
+    accent: "sky",
+    accentHex: "#0ea5e9"
+  },
+  {
+    title: "Restaurant Website",
+    description: "Responsive website designed for a restaurant to showcase menu and reservations.",
+    image: "Restaurant.jpg",
+    tech: ["React", "Tailwind"],
+    github: "https://restaurant-52fh.vercel.app/",
+    accent: "rose",
+    accentHex: "#f43f5e"
+  },
+  {
+    title: "Yoga Website",
+    description: "Responsive website designed for a yoga to showcase menu and reservations.",
+    image: "Yoga.jpg",
+    tech: ["React", "Tailwind"],
+    github: "https://yoga-lilac.vercel.app/",
+    accent: "rose",
+    accentHex: "#f43f5e"
+  },
+  {
+    title: "Space Explorer",
+    description: "Interactive space website featuring planets, galaxies, nebula videos, solar system information and space gallery built with React and Tailwind.",
+    image: "Space.jpg",
+    tech: ["React", "Tailwind", "JavaScript"],
+    github: "https://space-mu-blush.vercel.app/",
+    accent: "blue",
+    accentHex: "#3b82f6"
+  }
 ]
 
 function resolveImage(filename) {
