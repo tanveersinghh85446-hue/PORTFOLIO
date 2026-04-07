@@ -80,7 +80,7 @@ export default function About() {
         playsInline
         className="absolute inset-0 w-full h-full object-cover opacity-20 pointer-events-none"
       >
-        <source src="/Bg.mp4" type="video/mp4" />
+        <source src="/Herov.mp4" type="video/mp4" />
       </video>
 
       {/* HERO */}

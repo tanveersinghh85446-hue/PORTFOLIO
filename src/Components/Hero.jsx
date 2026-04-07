@@ -6,10 +6,8 @@ import { RiTailwindCssFill } from "react-icons/ri";
 import { VscVscode } from "react-icons/vsc";
 import { DiJavascript } from "react-icons/di";
 import { SiCoreldraw } from "react-icons/si";
-import { SiNetlify, SiSvelte, SiAstro, SiAlpinedotjs, SiVite, SiVitest, SiEslint, SiNuxt, SiRemix, SiCodersrank, SiAuth0, SiZod } from "react-icons/si";
-import { LuBrainCircuit } from "react-icons/lu";
-
-import { SiCanva } from "react-icons/si";
+import { SiNetlify, SiSvelte, SiAstro, SiVite, SiVitest, SiEslint, SiNuxt, SiCodersrank, SiZod } from "react-icons/si";
+    import { SiCanva } from "react-icons/si";
 import { IoMailOpenOutline } from "react-icons/io5";
 import { FaLinkedin } from "react-icons/fa";
 import { DiPhotoshop } from "react-icons/di";
@@ -137,7 +135,7 @@ export default function Home() {
                             <div className="flex-1 min-w-105">
                                 <FadeIn>
                                     <span className="font-['Syne',sans-serif] text-xs font-bold tracking-[0.14em] uppercase text-indigo-400 flex items-center gap-2 mb-6
-                                        after:content-[''] after:h-px after:bg-white/10 after:inline-block after:max-w-15 after:flex-1">
+                                        after:content-[''] after:h-px  after:inline-block after:max-w-15 after:flex-1">
                                         Frontend Developer
                                     </span>
                                 </FadeIn>
@@ -267,7 +265,7 @@ export default function Home() {
                         <FadeIn>
                             <div className="text-center mb-14">
                                 <span className="font-['Syne',sans-serif] text-xs font-bold tracking-[0.14em] uppercase text-indigo-400 flex items-center justify-center gap-2 mb-3
-                                    after:content-[''] after:h-px after:bg-white/10 after:inline-block after:max-w-15 after:flex-1">
+                                    after:content-[''] after:h-px after:inline-block after:max-w-15 after:flex-1">
                                     Tech Ecosystem
                                 </span>
                                 <h2 className="font-['Syne',sans-serif] text-[clamp(1.6rem,4vw,2.8rem)] font-extrabold text-white">Tools I Work With</h2>
@@ -317,7 +315,7 @@ export default function Home() {
                         <div className="flex-1 min-w-95 flex flex-col gap-5">
                             <FadeIn>
                                 <span className="font-['Syne',sans-serif] text-xs font-bold tracking-[0.14em] uppercase text-indigo-400 flex items-center gap-2 mb-2
-                                    after:content-[''] after:h-px after:bg-white/10 after:inline-block after:max-w-15 after:flex-1">
+                                    after:content-[''] after:h-px  after:inline-block after:max-w-15 after:flex-1">
                                     About My Work
                                 </span>
                                 <h2 className="font-['Syne',sans-serif] text-[clamp(1.6rem,3vw,2.4rem)] font-extrabold text-white mb-6">What I Bring to the Table</h2>

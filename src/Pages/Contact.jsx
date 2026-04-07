@@ -69,7 +69,7 @@ export default function Contact() {
           {/* HEADER */}
           <header className="text-center mb-16">
             <span className="font-['Syne',sans-serif] text-xs font-bold tracking-[0.14em] uppercase text-indigo-400 inline-flex items-center justify-center gap-2 mb-4
-              after:content-[''] after:inline-block after:w-10 after:h-px after:bg-white/10">
+              after:content-[''] after:inline-block after:w-10 after:h-px">
               Get In Touch
             </span>
             <h1 className="font-['Syne',sans-serif] font-extrabold text-[clamp(2.2rem,5vw,4rem)] text-white leading-[1.1] tracking-tight mb-4">
@@ -138,7 +138,7 @@ export default function Contact() {
           <section className="mb-20" aria-label="Services">
             <div className="text-center mb-10">
               <span className="font-['Syne',sans-serif] text-xs font-bold tracking-[0.14em] uppercase text-indigo-400 inline-flex items-center justify-center gap-2 mb-3
-                after:content-[''] after:inline-block after:w-10 after:h-px after:bg-white/10">
+                after:content-[''] after:inline-block after:w-10 after:h-px">
                 What I Offer
               </span>
               <h2 className="font-['Syne',sans-serif] font-extrabold text-[clamp(1.6rem,3vw,2.4rem)] text-white">Services</h2>
@@ -160,7 +160,7 @@ export default function Contact() {
           <section className="max-w-180 mx-auto mb-20" aria-label="FAQ">
             <div className="text-center mb-10">
               <span className="font-['Syne',sans-serif] text-xs font-bold tracking-[0.14em] uppercase text-indigo-400 inline-flex items-center justify-center gap-2 mb-3
-                after:content-[''] after:inline-block after:w-10 after:h-px after:bg-white/10">
+                after:content-[''] after:inline-block after:w-10 after:h-px">
                 FAQ
               </span>
               <h2 className="font-['Syne',sans-serif] font-extrabold text-[clamp(1.6rem,3vw,2.4rem)] text-white">Frequently Asked Questions</h2>
