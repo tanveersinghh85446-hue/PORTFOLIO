@@ -17,12 +17,16 @@ app.post("/api/contact", async (req, res) => {
   const { name, email, phone, message } = req.body;
 
   if (!name || !email || !phone || !message) {
-    return res.status(400).json({ success: false, error: "All fields are required." });
+    return res
+      .status(400)
+      .json({ success: false, error: "All fields are required." });
   }
 
   const phoneRegex = /^[0-9]{10}$/;
   if (!phoneRegex.test(phone)) {
-    return res.status(400).json({ success: false, error: "Enter a valid 10-digit phone number." });
+    return res
+      .status(400)
+      .json({ success: false, error: "Enter a valid 10-digit phone number." });
   }
 
   try {
@@ -45,7 +49,7 @@ app.post("/api/contact", async (req, res) => {
 
     // Auto-reply to client
     await resend.emails.send({
-      from: "onboarding@resend.dev",
+      from: "contact@tanveersingh.dev",
       to: email,
       subject: `Thanks for reaching out, ${name}! ✅`,
       html: `
@@ -57,10 +61,17 @@ app.post("/api/contact", async (req, res) => {
       `,
     });
 
-    return res.status(200).json({ success: true, message: "Message sent successfully!" });
+    return res
+      .status(200)
+      .json({ success: true, message: "Message sent successfully!" });
   } catch (err) {
     console.error("Email error:", err);
-    return res.status(500).json({ success: false, error: "Failed to send message. Try again later." });
+    return res
+      .status(500)
+      .json({
+        success: false,
+        error: "Failed to send message. Try again later.",
+      });
   }
 });
 
