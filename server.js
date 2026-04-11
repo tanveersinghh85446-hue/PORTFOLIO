@@ -9,7 +9,8 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-app.use(cors({ origin: process.env.CLIENT_URL || "http://localhost:5173" }));
+// app.use(cors({ origin: process.env.CLIENT_URL || "http://localhost:5173" }));
+app.use(cors({ origin: "*" }));
 app.use(express.json());
 
 app.post("/api/contact", async (req, res) => {
