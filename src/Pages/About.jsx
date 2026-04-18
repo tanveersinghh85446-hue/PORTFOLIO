@@ -165,7 +165,7 @@ export default function About() {
       {/* CERTIFICATES */}
       <div
         ref={certRef}
-        className={`relative z-10 max-w-6xl mx-auto px-6 pb-28 transition-all duration-700 ${certVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+        className={`relative z-10 max-w-6xl mx-auto px-6 pb-28 transition-all duration-700 ${certVisible ? "opacity-00 translate-y-0" : "opacity-0 translate-y-0"
           }`}
       >
         <div className="border-t border-blue-500/30 my-10" />
@@ -179,9 +179,9 @@ export default function About() {
         </h2>
 
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
-          <CertCard src="" title="Web Development" />
-          <CertCard src="" title="React" />
-          <CertCard src="" title="JavaScript" />
+          <CertCard src="Certificate.png" title="Web Development" />
+          <CertCard src="Certificate.png" title="React" />
+          <CertCard src="Certificate.png" title="JavaScript" />
         </div>
       </div>
 

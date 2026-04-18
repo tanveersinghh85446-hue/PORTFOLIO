@@ -388,7 +388,7 @@ export default function Home() {
                                     </a>
                                     <a href="https://www.instagram.com/web_createrr/" aria-label="Instagram"
                                         className="w-10 h-10 rounded-xl flex items-center justify-center bg-white/5 border border-white/[0.07] text-lg text-gray-500
-                                        transition-all duration-200 hover:bg-[#e1306c] hover:text-white hover:-translate-y-1">
+                                        transition-all duration-200 hover:bg-linear-to-r from-[#feda75] via-[#d62976] to-[#4f5bd5] hover:text-white hover:-translate-y-1">
                                         <FaInstagram />
                                     </a>
                                     <a href="https://www.linkedin.com/in/tanveer-singh-ab008637b/" aria-label="Instagram"
